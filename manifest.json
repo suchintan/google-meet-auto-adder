@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Google Meet Adder",
+  "description": "Automatically adds Google Meet to Google Calendar events when creating or editing an event without one.",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "host_permissions": ["https://calendar.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
